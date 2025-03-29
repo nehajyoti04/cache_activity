@@ -1,1 +1,8 @@
-version: "3.9"
+version: "2.1"
+
+services:
+  memcached:
+    hostname: memcached
+    image: memcached:alpine
+    restart: always
+    mem_limit: 128m

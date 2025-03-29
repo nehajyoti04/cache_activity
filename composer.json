@@ -19,6 +19,10 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
+        "drupal/memcache": "^2.7",
+        "drupal/memcache_admin": "^2.7",
+        "drupal/purge": "^3.6",
+        "drupal/purge_tokens": "^3.6",
         "drupal/varnish_purge": "^2.3",
         "drush/drush": "^11.4"
     },

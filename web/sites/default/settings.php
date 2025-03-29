@@ -826,3 +826,20 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_Lo6rxGq8M2WNFYHe1YpQLsLvwC2ne-1guKJVoqia98cslGAwhK0-EDwfLoRFRtYBWWrtuNFRXQ/sync';
+
+
+// Memcache settings
+$settings['memcache']['servers'] = ['memcached:11211' => 'default'];
+$settings['memcache']['bins'] = ['default' => 'default'];
+$settings['memcache']['key_prefix'] = 'drupal_';
+
+// Force Memcache as the default cache backend
+$settings['cache']['default'] = 'cache.backend.memcache';
+
+// Load Memcache service YAML
+$settings['container_yamls'][] = 'web/modules/contrib/memcache/memcache.services.yml';
+
+// Ensure bootstrap and discovery caches use Memcache
+$settings['cache']['bins']['bootstrap'] = 'cache.backend.memcache';
+$settings['cache']['bins']['discovery'] = 'cache.backend.memcache';
+
