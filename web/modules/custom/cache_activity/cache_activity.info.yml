@@ -1,0 +1,7 @@
+name: 'Cache Activity'
+type: module
+description: 'Display caching concepts.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:node
